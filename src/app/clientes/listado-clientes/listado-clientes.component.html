@@ -1,0 +1,15 @@
+<div class="col">
+  <h3>Clientes</h3>
+  <hr>
+  <ul>
+    <li *ngFor="let cliente of clientes">
+      {{ cliente.nombre }} - {{ cliente.credito|number }}
+    </li>
+  </ul>
+  <hr>
+  <ul>
+    @for (cliente of clientes; track cliente.nombre) {
+      <li>{{ cliente.nombre }} - {{ cliente.credito|number }}</li>
+    }
+  </ul>
+</div>
