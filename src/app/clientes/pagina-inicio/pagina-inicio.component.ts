@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ICliente } from '../interfaces/clientes';
 import { AgregarClienteComponent } from '../agregar-cliente/agregar-cliente.component';
+import { ClientesService } from '../clientes.service';
 
 @Component({
   selector: 'app-pagina-inicio',
@@ -8,18 +9,14 @@ import { AgregarClienteComponent } from '../agregar-cliente/agregar-cliente.comp
   styleUrl: './pagina-inicio.component.css'
 })
 export class PaginaInicioComponent {
+  // Inyectar el servicio
+  constructor (private clientesService: ClientesService){
 
-  clientes : ICliente [] = [
-    {
-      nombre: 'PedroPedroPedro',
-      credito: 100
-    },{
-      nombre: 'Diabloooo',
-      credito: 200
-    }
-  ]
-
-  agregarNuevoCliente(cliente: ICliente) {
-    this.clientes.push(cliente);
   }
+
+  // agregarNuevoCliente(cliente: ICliente) {
+  //   this.clientes.push(cliente);
+  // }
+
+  
 }

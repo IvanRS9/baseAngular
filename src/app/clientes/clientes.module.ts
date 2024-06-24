@@ -4,6 +4,7 @@ import { PaginaInicioComponent } from './pagina-inicio/pagina-inicio.component';
 import { FormsModule } from '@angular/forms';
 import { ListadoClientesComponent } from './listado-clientes/listado-clientes.component';
 import { AgregarClienteComponent } from './agregar-cliente/agregar-cliente.component';
+import { ClientesService } from './clientes.service';
 
 
 
@@ -18,6 +19,9 @@ import { AgregarClienteComponent } from './agregar-cliente/agregar-cliente.compo
   ],
   exports:[
     PaginaInicioComponent, ListadoClientesComponent
+  ],
+  providers:[
+    ClientesService
   ]
 })
 export class ClientesModule { }
