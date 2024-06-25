@@ -1,0 +1,59 @@
+<!-- Button trigger modal -->
+<div class="d-flex justify-content-end mb-3">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-add-empleado">
+    Agregar
+  </button>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="modal-add-empleado" tabindex="-1" aria-labelledby="modal-add-empleadoLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modal-add-empleadoLabel">Registrar informaci&oacute;n</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <form (submit)="agregar()">
+              <div class="mb-3 mt-2">
+                <input type="number" name="num" [(ngModel)]="add.num" class="form-control"
+                  placeholder="Numero de empleado">
+              </div>
+              <div class="mb-3">
+                <input type="text" name="nombre" [(ngModel)]="add.nombre" class="form-control"
+                  placeholder="Nombre del empleado">
+              </div>
+              <div class="mb-3">
+                <input type="email" name="correo" [(ngModel)]="add.correo" class="form-control"
+                  placeholder="Correo del empleado">
+              </div>
+              <div class="mb-3">
+                <input type="text" name="telefono" [(ngModel)]="add.telefono" class="form-control"
+                  placeholder="Telefono del empleado">
+              </div>
+              <div class="mb-3">
+                <input type="date" name="fecha" [(ngModel)]="add.fecha" class="form-control"
+                  placeholder="Fecha de nacimiento">
+              </div>
+              <div class="mb-3">
+                <label for="sexo" class="text-dark">Sexo</label>
+                <input type="radio" name="sexo" [(ngModel)]="add.sexo" id="sexo-masculino" value="masculino">
+                <label for="sexo-masculino" class="text-dark">Masculino</label>
+                <input type="radio" name="sexo" [(ngModel)]="add.sexo" id="sexo-femenino" value="femenino">
+                <label for="sexo-femenino" class="text-dark">Femenino</label>
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="btnModalClose" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-primary">Agregar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

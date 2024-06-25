@@ -5,11 +5,12 @@ import { ClientesModule } from './clientes/clientes.module';
 import { CompartidoModule } from './compartido/compartido.module';
 import { GiphyModule } from './giphy/giphy.module';
 import { HttpClientModule } from '@angular/common/http';
+import { EmpleadosModule } from './empleados/empleados.module';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, AcumuladorComponent, ClientesModule, CompartidoModule, GiphyModule, HttpClientModule],
+  imports: [RouterOutlet, AcumuladorComponent, ClientesModule, CompartidoModule, GiphyModule, HttpClientModule, EmpleadosModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
